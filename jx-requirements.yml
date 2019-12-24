@@ -1,34 +1,74 @@
+autoUpdate:
+  enabled: false
+  schedule: ""
+bootConfigURL: https://github.com/pvrkubernetes/jenkins-x-boot-config
 cluster:
-  clusterName: ""
-  environmentGitOwner: ""
-  project: ""
-  provider: gke
-  zone: ""
-gitops: true
+  clusterName: kafkacluster
+  environmentGitOwner: pvrkubernetes
+  environmentGitPublic: true
+  gitKind: github
+  gitName: github
+  gitServer: https://github.com
+  namespace: jx
+  provider: eks
+  region: ap-south-1
+  registry: 702769831180.dkr.ecr.ap-south-1.amazonaws.com
 environments:
-- key: dev
-- key: staging
-- key: production
+- ingress:
+    domain: 13.127.73.78.nip.io
+    externalDNS: false
+    namespaceSubDomain: -jx.
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: dev
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: staging
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: production
+gitops: true
 ingress:
-  domain: ""
+  domain: 13.127.73.78.nip.io
   externalDNS: false
+  namespaceSubDomain: -jx.
   tls:
     email: ""
     enabled: false
     production: false
 kaniko: true
+repository: nexus
 secretStorage: local
 storage:
+  backup:
+    enabled: true
+    url: s3://kafkacluster-backup-c79e631b-82ff-4d9f-bb60-1bcd577066f0
   logs:
-    enabled: false
-    url: ""
+    enabled: true
+    url: s3://kafkacluster-logs-80f151f4-5eea-4dc3-b169-db72a7e1abba
   reports:
-    enabled: false
-    url: ""
+    enabled: true
+    url: s3://kafkacluster-reports-300f3e8b-9403-4f19-990e-9427851c4614
   repository:
-    enabled: false
-    url: ""
+    enabled: true
+    url: s3://kafkacluster-repository-67261d20-b42b-4b9f-a7e8-b66498f3aaef
+vault: {}
+velero: {}
 versionStream:
-  ref: "master"
+  ref: v1.0.266
   url: https://github.com/jenkins-x/jenkins-x-versions.git
 webhook: prow

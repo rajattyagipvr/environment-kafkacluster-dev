@@ -1,0 +1,10 @@
+adminUser:
+  password: local:kafkacluster/adminUser:password
+  username: admin
+enableDocker: false
+pipelineUser:
+  email: rajat.tyagi.us@gmail.com
+  token: local:kafkacluster/pipelineUser:token
+  username: rajattyagius
+prow:
+  hmacToken: local:kafkacluster/prow:hmacToken
