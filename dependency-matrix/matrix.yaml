@@ -5,3 +5,9 @@ dependencies:
   url: https://github.com/pvrkubernetes/kafkaCRstrimzichart.git
   version: ""
   versionURL: ""
+- host: github.com
+  owner: pvrkubernetes
+  repo: kafkaCR
+  url: https://github.com/pvrkubernetes/kafkaCR.git
+  version: ""
+  versionURL: ""
