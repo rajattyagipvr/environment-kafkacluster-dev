@@ -1,0 +1,21 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: pvrkubernetes
+    provider: github
+    repository: kafkaCRstrimzichart
+  name: pvrkubernetes-kafkacrstrimzichart
+spec:
+  description: Imported application for pvrkubernetes/kafkaCRstrimzichart
+  httpCloneURL: https://github.com/pvrkubernetes/kafkaCRstrimzichart.git
+  org: pvrkubernetes
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: kafkaCRstrimzichart
+  scheduler:
+    kind: ""
+    name: ""
+  url: https://github.com/pvrkubernetes/kafkaCRstrimzichart.git
