@@ -15,7 +15,7 @@ cluster:
   registry: 702769831180.dkr.ecr.ap-south-1.amazonaws.com
 environments:
 - ingress:
-    domain: 13.127.73.78.nip.io
+    domain: 13.232.245.194.nip.io
     externalDNS: false
     namespaceSubDomain: -jx.
     tls:
@@ -43,7 +43,7 @@ environments:
   key: production
 gitops: true
 ingress:
-  domain: 13.127.73.78.nip.io
+  domain: 13.232.245.194.nip.io
   externalDNS: false
   namespaceSubDomain: -jx.
   tls:
