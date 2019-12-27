@@ -67,7 +67,7 @@ storage:
     enabled: true
     url: s3://kafkacluster-repository-67261d20-b42b-4b9f-a7e8-b66498f3aaef
 vault: {}
-velero: 
+velero:
   namespace: velero
 versionStream:
   ref: v1.0.266

@@ -27,6 +27,19 @@ velero:
       bucket: {{ .Requirements.storage.backup.url | removeScheme | quote }}
       config:
         region: {{ .Requirements.cluster.region | quote }}
+    volumeSnapshotLocation:
+      config:
+        region: {{ .Requirements.cluster.region | quote }}
+# Init containers to add to the Velero deployment's pod spec. At least one plugin provider image is required.
+  initContainers:
+    - name: velero-plugin-for-aws
+      image: velero/velero-plugin-for-aws:v1.0.0
+      imagePullPolicy: IfNotPresent
+      volumeMounts:
+        - mountPath: /target
+          name: plugins
+        
+        
 {{- else if eq .Requirements.cluster.provider "azure" }}
   configuration:
     provider: azure
