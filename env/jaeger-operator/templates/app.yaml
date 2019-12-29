@@ -1,0 +1,12 @@
+apiVersion: jenkins.io/v1
+kind: App
+metadata:
+  annotations:
+    jenkins.io/chart-description: jaeger-operator Helm chart for Kubernetes
+    jenkins.io/chart-repository: https://jaegertracing.github.io/helm-charts
+  creationTimestamp: null
+  labels:
+    jenkins.io/app-name: jaeger-operator
+    jenkins.io/app-version: 2.12.2
+  name: jaeger-operator
+spec: {}
