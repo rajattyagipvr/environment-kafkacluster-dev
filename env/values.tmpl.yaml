@@ -6,3 +6,17 @@ tekton:
 {{- else }}
   enabled: false
 {{- end }}
+#added by rajat for elasticsearch and operator
+elasticsearch:
+  cerebro:
+    enabled: true
+  image:
+    tag: 6.1.3_1
+  kibana:
+    enabled: true
+  use-ssl: false
+elasticsearch-operator:
+  image:
+    tag: 0.4.0
+  rbac:
+    enabled: true
