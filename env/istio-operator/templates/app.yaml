@@ -1,0 +1,12 @@
+apiVersion: jenkins.io/v1
+kind: App
+metadata:
+  annotations:
+    jenkins.io/chart-description: istio-operator manages Istio deployments on Kubernetes
+    jenkins.io/chart-repository: https://kubernetes-charts.banzaicloud.com
+  creationTimestamp: null
+  labels:
+    jenkins.io/app-name: istio-operator
+    jenkins.io/app-version: 0.0.30
+  name: istio-operator
+spec: {}

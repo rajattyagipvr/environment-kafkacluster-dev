@@ -18,10 +18,11 @@ dependencies:
   repository: http://chartmuseum.jenkins-x.io
 - name: jenkins-x-platform
   repository: http://chartmuseum.jenkins-x.io
-#- condition: chartmuseum.enabled
-#  name: chartmuseum
-#  repository: http://chartmuseum.jenkins-x.io
-- name: prometheus-operator
+- alias: prometheus-operator
+  name: prometheus-operator
   repository: https://kubernetes-charts.storage.googleapis.com
   version: 8.5.0
-  alias: prometheus-operator
+- alias: istio-operator
+  name: istio-operator
+  repository: https://kubernetes-charts.banzaicloud.com
+  version: 0.0.30
