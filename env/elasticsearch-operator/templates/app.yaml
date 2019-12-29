@@ -1,0 +1,12 @@
+apiVersion: jenkins.io/v1
+kind: App
+metadata:
+  annotations:
+    jenkins.io/chart-description: A Helm chart for Elasticsearch operator
+    jenkins.io/chart-repository: https://raw.githubusercontent.com/upmc-enterprises/elasticsearch-operator/master/charts
+  creationTimestamp: null
+  labels:
+    jenkins.io/app-name: elasticsearch-operator
+    jenkins.io/app-version: 0.1.3
+  name: elasticsearch-operator
+spec: {}
