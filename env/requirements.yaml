@@ -26,6 +26,10 @@ dependencies:
   name: istio-operator
   repository: https://kubernetes-charts.banzaicloud.com
   version: 0.0.30
+- alias: elasticsearch
+  name: elasticsearch
+  repository: https://raw.githubusercontent.com/upmc-enterprises/elasticsearch-operator/master/charts
+  version: 0.1.5
 - alias: elasticsearch-operator
   name: elasticsearch-operator
   repository: https://raw.githubusercontent.com/upmc-enterprises/elasticsearch-operator/master/charts
