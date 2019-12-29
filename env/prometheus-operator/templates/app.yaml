@@ -1,0 +1,12 @@
+apiVersion: jenkins.io/v1
+kind: App
+metadata:
+  annotations:
+    jenkins.io/chart-description: A Helm chart for the Jenkins X prometheus operator App
+    jenkins.io/chart-repository: http://chartmuseum.jenkins-x.io
+  creationTimestamp: null
+  labels:
+    jenkins.io/app-name: jx-app-prometheus-operator
+    jenkins.io/app-version: 8.5.0
+  name: jx-app-prometheus-operator
+spec: {}
