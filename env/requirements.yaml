@@ -26,3 +26,7 @@ dependencies:
   name: istio-operator
   repository: https://kubernetes-charts.banzaicloud.com
   version: 0.0.30
+- alias: jaeger-operator
+  name: jaeger-operator
+  repository: https://jaegertracing.github.io/helm-charts
+  version: 2.12.2
