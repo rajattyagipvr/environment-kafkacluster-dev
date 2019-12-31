@@ -18,10 +18,10 @@ dependencies:
   repository: http://chartmuseum.jenkins-x.io
 - name: jenkins-x-platform
   repository: http://chartmuseum.jenkins-x.io
-- alias: prometheus-operator
-  name: prometheus-operator
-  repository: https://kubernetes-charts.storage.googleapis.com
-  version: 8.5.0
+#- alias: prometheus-operator
+#  name: prometheus-operator
+#  repository: https://kubernetes-charts.storage.googleapis.com
+#  version: 8.5.0
 - alias: istio-operator
   name: istio-operator
   repository: https://kubernetes-charts.banzaicloud.com
@@ -38,3 +38,7 @@ dependencies:
   name: jaeger-operator
   repository: https://jaegertracing.github.io/helm-charts
   version: 2.12.2
+- alias: prometheus-operator
+  name: prometheus-operator
+  repository: https://kubernetes-charts.storage.googleapis.com
+  version: 8.5.0
