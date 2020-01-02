@@ -75,8 +75,8 @@ prometheus-operator:
         smtp_from: 'sysadmin@example.com'
         smtp_smarthost: 'some-smtp-host'
 
-      templates:
-      - '*.tmpl'
+      #templates:
+      #- '*.tmpl'
 
       route:
         group_by: ['job']
@@ -97,12 +97,12 @@ prometheus-operator:
             severity: warning
             group: custom
           group_by: ['namespace']
-          receiver: 'slack'
+          receiver: 'null'
         - match:
             severity: critical
             group: custom
           group_by: ['namespace']
-          receiver: 'victorops'
+          receiver: 'null'
 
       receivers:
       - name: 'null'
